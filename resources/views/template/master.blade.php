@@ -15,6 +15,12 @@
     <link rel="stylesheet" href="{{ asset('assets') }}/vendor/toastr/toastr.min.css">
     <link rel="stylesheet" href="{{ asset('assets') }}/vendor/charts-c3/plugin.css" />
 
+    <link rel="stylesheet" href="{{ asset('assets') }}/vendor/jquery-datatable/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet"
+        href="{{ asset('assets') }}/vendor/jquery-datatable/fixedeader/dataTables.fixedcolumns.bootstrap4.min.css">
+    <link rel="stylesheet"
+        href="{{ asset('assets') }}/vendor/jquery-datatable/fixedeader/dataTables.fixedheader.bootstrap4.min.css">
+
     <!-- MAIN Project CSS file -->
     <link rel="stylesheet" href="{{ asset('assets') }}/css/main.css">
 </head>
@@ -63,6 +69,8 @@
     <script src="{{ asset('assets') }}/bundles/libscripts.bundle.js"></script>
     <script src="{{ asset('assets') }}/bundles/vendorscripts.bundle.js"></script>
 
+    <script src="{{ asset('assets') }}/bundles/datatablescripts.bundle.js"></script>
+
     <!-- page vendor js file -->
     <script src="{{ asset('assets') }}/vendor/toastr/toastr.js"></script>
     <script src="{{ asset('assets') }}/bundles/c3.bundle.js"></script>
@@ -70,6 +78,8 @@
     <!-- page js file -->
     <script src="{{ asset('assets') }}/bundles/mainscripts.bundle.js"></script>
     <script src="{{ asset('assets') }}/html-versiokn/js/index.js"></script>
+
+    <script src="{{ asset('assets') }}/html-versiokn/js/pages/tables/jquery-datatable.js"></script>
 
     @yield('script')
 

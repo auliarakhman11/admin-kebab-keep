@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
-
+use App\Http\Controllers\CabangController;
 use App\Http\Controllers\HomeController;
 
 use App\Http\Controllers\UserController;
@@ -40,6 +40,14 @@ Route::middleware('auth')->group(function () {
 
     Route::post('edit-user', [UserController::class, 'editUser'])->name('editUser');
     //enduser
+
+    //cabang
+    Route::get('outlet', [CabangController::class, 'index'])->name('outlet');
+    Route::post('outlet', [CabangController::class, 'addOutlet'])->name('addOutlet');
+    Route::patch('editOutlet', [CabangController::class, 'editOutlet'])->name('editOutlet');
+    Route::get('deleteEmailCabang/{id}', [CabangController::class, 'deleteEmailCabang'])->name('deleteEmailCabang');
+    Route::post('editHargaPengeluaran', [CabangController::class, 'editHargaPengeluaran'])->name('editHargaPengeluaran');
+    //end cabang
 
 
 

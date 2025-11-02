@@ -63,17 +63,12 @@
                             </ul>
                         </li>
 
-                        <li class="{{ Request::is(['/']) ? 'active' : '' }}">
+                        <li class="{{ Request::is(['outlet']) ? 'active' : '' }}">
                             <a href="#database" class="has-arrow"><i class="fa fa-table"></i><span>Database</span></a>
                             <ul>
-                                <li class="{{ Request::is('/') ? 'active' : '' }}"><a
-                                        href="{{ route('home') }}">Home</a></li>
-                                <li><a href="h-menu.html">Analytical H-Menu</a></li>
-                                <li><a href="index9.html">IoT Dashboard</a></li>
-                                <li><a href="index2.html">Demographic</a></li>
-                                <li><a href="index6.html">Project Board</a></li>
-                                <li><a href="index7.html">Crypto Dashboard</a></li>
-                                <li><a href="index8.html">eCommerce</a></li>
+                                <li class="{{ Request::is('outlet') ? 'active' : '' }}"><a
+                                        href="{{ route('outlet') }}">Outlet</a></li>
+
                             </ul>
                         </li>
                         {{-- <li>
