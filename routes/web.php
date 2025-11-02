@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AkunPengeluaranController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\BahanSatuanController;
 use App\Http\Controllers\CabangController;
 use App\Http\Controllers\HomeController;
 
@@ -55,6 +56,15 @@ Route::middleware('auth')->group(function () {
     Route::post('add-akun', [AkunPengeluaranController::class, 'addAkun'])->name('addAkun');
     Route::patch('edit-akun', [AkunPengeluaranController::class, 'editAkun'])->name('editAkun');
     //end pengeluaran
+
+    //bahan
+    Route::get('/bahan-satuan', [BahanSatuanController::class, 'index'])->name('bahanSatuan');
+    Route::post('satuan', [BahanSatuanController::class, 'addSatuan'])->name('addSatuan');
+    Route::post('bahan', [BahanSatuanController::class, 'addBahan'])->name('addBahan');
+    Route::patch('satuan', [BahanSatuanController::class, 'editSatuan'])->name('editSatuan');
+    Route::patch('bahan', [BahanSatuanController::class, 'editBahan'])->name('editBahan');
+    Route::patch('dropDataBahan', [BahanSatuanController::class, 'dropDataBahan'])->name('dropDataBahan');
+    //endbahan
 
 
 
