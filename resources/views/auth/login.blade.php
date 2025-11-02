@@ -33,10 +33,12 @@
                         </div>
                         <div class="body">
                             <form class="form-auth-small" action="{{ route('login') }}" method="post">
+                                @csrf
                                 <div class="form-group">
                                     <label for="username" class="control-label sr-only">Username</label>
                                     <input type="text" class="form-control" id="username"
-                                        placeholder="Masukan Username" value="{{ old('username') }}" required>
+                                        placeholder="Masukan Username" value="{{ old('username') }}" name="username"
+                                        required>
                                     @error('username')
                                         <div class="text-danger">
                                             {{ $message }}
@@ -45,7 +47,13 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="password" class="control-label sr-only">Password</label>
-                                    <input type="password" class="form-control" id="password" placeholder="Password">
+                                    <input type="password" class="form-control" id="password" placeholder="Password"
+                                        name="password" required>
+                                    @error('password')
+                                        <div class="text-danger">
+                                            {{ $message }}
+                                        </div>
+                                    @enderror
                                 </div>
                                 {{-- <div class="form-group clearfix">
                                     <label class="fancy-checkbox element-left">

@@ -1,64 +1,90 @@
-  <!-- Navbar -->
-  <nav class="main-header navbar navbar-expand navbar-dark">
-    <!-- Left navbar links -->
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
-      </li>
-      {{-- <li class="nav-item d-none d-sm-inline-block">
-        <a href="index3.html" class="nav-link">Home</a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link">Contact</a>
-      </li> --}}
-      <li class="nav-item d-none d-sm-inline-block">
-        <div class="custom-control mt-2 custom-switch custom-switch-off-light custom-switch-on-secondary">
-          <input type="checkbox" class="custom-control-input" id="dark_mode" value="1">
-          <label class="custom-control-label text-light" for="dark_mode">Dark Mode</label>
-      </div>
-      </li>
-    </ul>
+<nav class="navbar navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-brand">
+            <button type="button" class="btn-toggle-offcanvas"><i class="fa fa-bars"></i></button>
+            <button type="button" class="btn-toggle-fullwidth"><i class="fa fa-bars"></i></button>
+            <a href="index.html">KEBAB KEEP</a>
+        </div>
 
-    <!-- Right navbar links -->
-    <ul class="navbar-nav ml-auto">
-      <!-- Navbar Search -->
-      {{-- <li class="nav-item">
-        <a class="nav-link" data-widget="navbar-search" href="#" role="button">
-          <i class="fas fa-search"></i>
-        </a>
-        <div class="navbar-search-block">
-          <form class="form-inline">
-            <div class="input-group input-group-sm">
-              <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
-              <div class="input-group-append">
-                <button class="btn btn-navbar" type="submit">
-                  <i class="fas fa-search"></i>
-                </button>
-                <button class="btn btn-navbar" type="button" data-widget="navbar-search">
-                  <i class="fas fa-times"></i>
-                </button>
-              </div>
+        <div class="navbar-right">
+            {{-- <form id="navbar-search" class="navbar-form search-form">
+                <input value="" class="form-control" placeholder="Search here..." type="text">
+                <button type="button" class="btn btn-default"><i class="icon-magnifier"></i></button>
+            </form> --}}
+
+            <div id="navbar-menu">
+                <ul class="nav navbar-nav">
+                    {{-- <li class="dropdown">
+                        <a href="javascript:void(0);" class="dropdown-toggle icon-menu" data-toggle="dropdown">
+                            <i class="fa fa-bell"></i>
+                            <span class="notification-dot"></span>
+                        </a>
+                        <ul class="dropdown-menu notifications">
+                            <li class="header"><strong>You have 4 new Notifications</strong></li>
+                            <li>
+                                <a href="javascript:void(0);">
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <i class="icon-info text-warning"></i>
+                                        </div>
+                                        <div class="media-body">
+                                            <p class="text">Campaign <strong>Holiday Sale</strong> is nearly
+                                                reach budget limit.</p>
+                                            <span class="timestamp">10:00 AM Today</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <i class="icon-like text-success"></i>
+                                        </div>
+                                        <div class="media-body">
+                                            <p class="text">Your New Campaign <strong>Holiday Sale</strong> is
+                                                approved.</p>
+                                            <span class="timestamp">11:30 AM Today</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <i class="icon-pie-chart text-info"></i>
+                                        </div>
+                                        <div class="media-body">
+                                            <p class="text">Website visits from Twitter is 27% higher than
+                                                last week.</p>
+                                            <span class="timestamp">04:00 PM Today</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <i class="icon-info text-danger"></i>
+                                        </div>
+                                        <div class="media-body">
+                                            <p class="text">Error on website analytics configurations</p>
+                                            <span class="timestamp">Yesterday</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="footer"><a href="javascript:void(0);" class="more">See all
+                                    notifications</a></li>
+                        </ul>
+                    </li> --}}
+                    <li>
+                        <a href="{{ route('logout') }}" class="icon-menu"><i class="fa fa-power-off"></i></a>
+                    </li>
+                </ul>
             </div>
-          </form>
         </div>
-      </li> --}}
-
-      <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle text-light" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <i class="fas fa-user text-light"></i> {{ Auth::user()->name }}
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <a class="dropdown-item" href="{{ route('gantiPassword') }}">Ganti Password</a>
-          <a class="dropdown-item" href="{{ route('logout') }}">Logout</a>
-        </div>
-      </div>
-      
-      {{-- <li class="nav-item">
-        <a class="nav-link" data-widget="fullscreen" href="#" role="button">
-          <i class="fas fa-expand-arrows-alt"></i>
-        </a>
-      </li> --}}
-      
-    </ul>
-  </nav>
-  <!-- /.navbar -->
+    </div>
+</nav>
