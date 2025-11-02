@@ -63,11 +63,13 @@
                             </ul>
                         </li>
 
-                        <li class="{{ Request::is(['outlet']) ? 'active' : '' }}">
+                        <li class="{{ Request::is(['outlet', 'akun-pengeluaran']) ? 'active' : '' }}">
                             <a href="#database" class="has-arrow"><i class="fa fa-table"></i><span>Database</span></a>
                             <ul>
                                 <li class="{{ Request::is('outlet') ? 'active' : '' }}"><a
                                         href="{{ route('outlet') }}">Outlet</a></li>
+                                <li class="{{ Request::is('akun-pengeluaran') ? 'active' : '' }}"><a
+                                        href="{{ route('akunPengeluaran') }}">Akun</a></li>
 
                             </ul>
                         </li>

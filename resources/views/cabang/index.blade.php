@@ -258,7 +258,7 @@
 
     @foreach ($outlet as $o)
         <!-- Modal -->
-        <form action="{{ route('editOutlet') }}" method="post" enctype="multipart/form-data">
+        <form action="{{ route('editOutlet') }}" method="post">
 
             @method('patch')
             @csrf

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AkunPengeluaranController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CabangController;
 use App\Http\Controllers\HomeController;
@@ -48,6 +49,12 @@ Route::middleware('auth')->group(function () {
     Route::get('deleteEmailCabang/{id}', [CabangController::class, 'deleteEmailCabang'])->name('deleteEmailCabang');
     Route::post('editHargaPengeluaran', [CabangController::class, 'editHargaPengeluaran'])->name('editHargaPengeluaran');
     //end cabang
+
+    //akun pengeluaran
+    Route::get('akun-pengeluaran', [AkunPengeluaranController::class, 'index'])->name('akunPengeluaran');
+    Route::post('add-akun', [AkunPengeluaranController::class, 'addAkun'])->name('addAkun');
+    Route::patch('edit-akun', [AkunPengeluaranController::class, 'editAkun'])->name('editAkun');
+    //end pengeluaran
 
 
 
