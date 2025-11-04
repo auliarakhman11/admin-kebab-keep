@@ -9,7 +9,8 @@ use App\Http\Controllers\KaryawanController;
 use App\Http\Controllers\PembayaranController;
 use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\UserController;
-
+use App\Http\Controllers\UserKasirController;
+use App\Http\Controllers\VarianController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -108,6 +109,18 @@ Route::middleware('auth')->group(function () {
     Route::post('tambah-kategori', [ProductsController::class, 'tambahKategori'])->name('tambahKategori');
     Route::post('edit-kategori', [ProductsController::class, 'editKategori'])->name('editKategori');
     //end kategori
+
+    //user kasir
+    Route::get('/user-kasir', [UserKasirController::class, 'index'])->name('userKasir');
+    Route::post('/user-kasir', [UserKasirController::class, 'addUser'])->name('addUserKasir');
+    Route::post('edit-password-kasir', [UserKasirController::class, 'editPasswordKasir'])->name('editPasswordKasir');
+    //end user kasir
+
+    //varian
+    Route::get('/varian', [VarianController::class, 'index'])->name('varian');
+    Route::post('/varian', [VarianController::class, 'addVarian'])->name('addVarian');
+    Route::patch('/varian', [VarianController::class, 'editVarian'])->name('editVarian');
+    //end varian
 
 
 

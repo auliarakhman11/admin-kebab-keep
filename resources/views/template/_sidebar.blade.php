@@ -65,7 +65,7 @@
                         </li>
 
                         <li
-                            class="{{ Request::is(['outlet', 'akun-pengeluaran', 'bahan-satuan', 'barangKebutuhan', 'pembayaran', 'karyawan', 'products']) ? 'active' : '' }}">
+                            class="{{ Request::is(['outlet', 'akun-pengeluaran', 'bahan-satuan', 'barangKebutuhan', 'pembayaran', 'karyawan', 'products', 'user-kasir', 'varian']) ? 'active' : '' }}">
                             <a href="#database" class="has-arrow"><i class="fa fa-table"></i><span>Database</span></a>
                             <ul>
                                 <li class="{{ Request::is('outlet') ? 'active' : '' }}"><a
@@ -82,6 +82,11 @@
                                         href="{{ route('karyawan') }}">Karyawan</a></li>
                                 <li class="{{ Request::is('products') ? 'active' : '' }}"><a
                                         href="{{ route('products') }}">Produk</a></li>
+
+                                <li class="{{ Request::is('user-kasir') ? 'active' : '' }}"><a
+                                        href="{{ route('userKasir') }}">User Kasir</a></li>
+                                <li class="{{ Request::is('varian') ? 'active' : '' }}"><a
+                                        href="{{ route('varian') }}">Varian</a></li>
 
                             </ul>
                         </li>
